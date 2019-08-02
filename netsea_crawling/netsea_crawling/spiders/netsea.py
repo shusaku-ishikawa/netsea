@@ -153,8 +153,13 @@ class NetseaSpider(Spider):
             flag = 0 if stock_input == None or stock_input == 'hidden' else 1
             
             # jan
-            jan = self._extract_jan(response.xpath('//*[@id="itemDetailSec"]/table/tbody/tr[7]/td/text()').extract_first())
-            
+            trs = response.xpath('//*[@id="itemDetailSec"]/table/tbody/tr')
+            for tr in trs:
+                th_text = tr.xpath('./th/text()').extract_first()
+                if th_text == 'JANコード':
+                    td_text = tr.xpath('./td/text()').extract_first()
+                    jan = self._extract_jan(td_text)
+
             # 画像URLのリスト
             image_urls = []
             

@@ -69,7 +69,6 @@ class MyItemPipeline(object):
     # yahoo idの付与等を行う
     def process_item(self, item, spider):
         code = item['code']
-        print(item) 
         if self._product_exists(code):
             r = self._update_flag(code, item['flag'])
             print('商品: {item_code} の在庫を更新しました'.format( item_code = code ))
