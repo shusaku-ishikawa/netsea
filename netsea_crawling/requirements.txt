@@ -50,7 +50,7 @@ Shapely==1.6.4.post2
 six==1.12.0
 soupsieve==1.9.1
 termcolor==1.1.0
-Twisted==19.2.1
+Twisted==22.2.0
 uritemplate==3.0.0
 urllib3==1.25.3
 w3lib==1.20.0
