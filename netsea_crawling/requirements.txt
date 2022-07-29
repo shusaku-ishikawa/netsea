@@ -43,7 +43,7 @@ queuelib==1.5.0
 requests==2.22.0
 requests-oauthlib==1.2.0
 rsa==4.0
-Scrapy==1.7.1
+Scrapy==2.6.2
 selenium==3.141.0
 service-identity==18.1.0
 Shapely==1.6.4.post2
